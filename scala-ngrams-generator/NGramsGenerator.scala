@@ -22,7 +22,7 @@ object NGramsGenerator
   {
     val nGramsBuffer = new NGramsBuffer(minSize, maxSize)
     for (t <- this.getTokenizerIterator(text))
-    yield
+      yield
      {
        nGramsBuffer.addToken(t.asInstanceOf[String])
        nGramsBuffer.getNGrams
